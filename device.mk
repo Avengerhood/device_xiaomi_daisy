@@ -33,6 +33,17 @@ PRODUCT_ENFORCE_RRO_TARGETS := \
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 $(LOCAL_PATH)/overlay-lineage/lineage-sdk
 
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    XiaomiParts
+    
+    # CPU & GPU Boost
+PRODUCT_PACKAGES += \
+    init.gpuboost.rc \
+    init.gpuboost.sh \
+    init.cpuboost.rc \
+    init.cpuboost.sh
+
 # Board
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_BOARD_PLATFORM := msm8953
